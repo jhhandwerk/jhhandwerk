@@ -31,14 +31,14 @@ const rootsList = [
         "c": "ニ",
     }
 ]
-//const random = Math.floor(Math.random()*kanjiList.length);
+const random = Math.floor(Math.random()*kanjiList.length);
 const correction = document.getElementById("correction");
 const english = document.getElementById("english");
-const sentence = document.getElementById("sentence");
+// const sentence = document.getElementById("sentence");
 const correct = document.getElementById("correct");
 const incorrect = document.getElementById("incorrect");
 const extravocab = document.getElementById("vocab");
-const roots = document.getElementById("roots");
+// const roots = document.getElementById("roots");
 let randomNum = 0;
 
 
@@ -91,7 +91,7 @@ input.addEventListener("keyup", function(event){
     btn.addEventListener("click", function(){
     //alert('hello');
     randomNum = randomNumber();
-    extravocab.innerHTML = extraVocabList[randomNum].one+"<br> "+extraVocabList[randomNum].two+"<br>"+extraVocabList[randomNum].three;
+    // extravocab.innerHTML = extraVocabList[randomNum].one+"<br> "+extraVocabList[randomNum].two+"<br>"+extraVocabList[randomNum].three;
     kanji.innerHTML = kanjiList[randomNum];
     result.innerHTML = ("&nbsp;")
     correction.innerHTML = ("&nbsp;");
