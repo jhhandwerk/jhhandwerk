@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2NJ2K9YDJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z2NJ2K9YDJ');
+  </script>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="JS/parallax.js"></script>
+    <title>Hello</title>
 </head>
 <body>
-    <h1>hello world</h1>
+    <!-- 3 line sidenav-->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="articles/index.html">Articles</a>
+    <a href="projects/projects.html">Projects.....</a>
+
+    
+   
+   
+  </div>
+  
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
+  
+  <!--nav toggle functionality-->
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
+  <!-- end 3 line sidenav-->
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img2/wave.jpg">
+    <p>Hello</p>
+    </div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img2/baba.jpg">
+    <p>I said hello</p>
+    </div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img2/fern.jpg">
+    <p class="p2">is this the only place you thought to go</p>
+    </div>
 </body>
 </html>
