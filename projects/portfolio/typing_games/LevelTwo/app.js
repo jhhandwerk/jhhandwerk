@@ -2,16 +2,105 @@ const kanji = document.getElementById("kanji");
 const input = document.getElementById("input");
 //const value = input.value;
 const result = document.getElementById("result");
-const kanjiList = [
-"そいうなんと言うかな、切り口",
-"そいうなんと言うかな、状態",
-"そいうなんと言うかな、現状",]
+const kanjiList = ["悩む",
+"相談",
+"絶対",
+"約束",
+"破る",
+"警備",
+"都合",
+"延期",
+"住宅",
+"光",
+"奥",
+"届く",
+"政府",
+"調査",
+"農産物",
+"被害",
+"記事",
+"汗",
+"流す",
+"働く",
+"警告",
+"飲酒",
+"習慣",
+"改める",
+"一方",
+"姉妹",
+"姿",
+"似る",
+"結ぶ",
+"著者",
+"地域",
+"住民",
+"観察",
+"歴史"]
 const yomiList = [
-"soiunanntoiukanakirikuchi",
-"soiunanntoiukanajyoutai",
-"soiunanntoiukanagennjyou",
+"nayamu",
+"soudan",
+"zettai",
+"yakusoku",
+"yaburu",
+"keibi",
+"tsugou",
+"enki",
+"jyuutaku",
+"Hikari",
+"oku",
+"todoku",
+"seifu",
+"cyousa",
+"nousannbutsu",
+"higai",
+"kiji",
+"ase",
+"nagasu",
+"hataraku",
+"keikoku",
+"inshu",
+"shyuukann",
+"aratameru",
+"ippou",
+"shimai",
+"sugata",
+"niru",
+"musubu",
+"chosha",
+"chiiki",
+"jyuuminn",
+"kansatsu",
+"rekishi"
 ]
-const englishList = []
+const englishList = [
+"postpone",
+"House",
+"Light",
+"Oh",
+"reach",
+"government",
+"Research",
+"Agricultural product",
+"damage",
+"article",
+"Sweat",
+"Flush",
+"work",
+"warn",
+"Drink",
+"Habit",
+"change",
+"on the other hand",
+"Sister",
+"figure",
+"Resemble",
+"tie",
+"author",
+"area",
+"residents",
+"observation",
+"history",
+]
 const sentenceList = []
 const vocabList = ["何 (what)<br>何 (what)","何 (what)<br>何 (what)","何 (what)<br>何 (what)","何 (what)<br>何 (what)","何 (what)<br>何 (what)"]
 const extraVocabList = [
@@ -99,6 +188,12 @@ input.addEventListener("keyup", function(event){
     english.innerHTML = ("&nbsp;");
     //sentence.innerHTML = (".");
     //extravocab.innerHTML = (".");
-
-
 });
+
+function twitterExample() {
+  window.open(`https://twitter.com/search?q=${kanjiList[randomNum]}&src=typed_query`, target='_blank')
+};
+
+function jishoExample() {
+  window.open(`https://jisho.org/search/${kanjiList[randomNum]}%20%23sentences`, target='_blank')
+};
